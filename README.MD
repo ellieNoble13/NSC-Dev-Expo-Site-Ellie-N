@@ -8,7 +8,7 @@ This repository serves as a static site rendering for the Application Developmen
 - `npm run start:web` to start up the frontend development server.
 
 # Resources
-
+- [Review before implementing components or pages: Introduction to Expo Router Layout Files](https://youtu.be/Yh6Qlg2CYwQ?si=c5Zy0PBnwWYwzOtV)
 - [Figma Design](https://www.figma.com/design/nswMhBThzHDCqsR7F2HxbF/NSC-Dev-site-redesign-wireframes?node-id=73-1231&t=SbPUpY0Pq8fQwScA-1)
 - [React Native Component Library](https://reactnative.dev/docs/components-and-apis)
 - [CSS Reference](https://css-tricks.com/)
