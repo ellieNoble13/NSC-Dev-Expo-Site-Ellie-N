@@ -11,6 +11,12 @@ interface TalentCardProps {
     role: string;
 }
 
+
+interface TalentSectionProps {
+    students: Student[];
+    title?: string;
+}
+
 const TalentCard: React.FC<TalentCardProps> = ({ name, role }) => {
     return (
         <View style={styles.card}>
@@ -23,18 +29,10 @@ const TalentCard: React.FC<TalentCardProps> = ({ name, role }) => {
     );
 };
 
-
-const TalentSection: React.FC = () => {
-    const students: Student[] = [
-        { name: "Bob Smith", role: "Tech Lead" },
-        { name: "Ed Boi", role: "Design Lead" },
-        { name: "Leila Natter", role: "Back End Engineer" },
-        { name: "Jimmy Marter", role: "Project Manager" }
-    ];
-
+const TalentSection: React.FC<TalentSectionProps> = ({ students, title }) => {
     return (
         <View style={styles.outerContainer}>
-            <Text style={styles.header}>Meet the future talent</Text>
+            <Text style={styles.header}>{title || "Meet the future talent"}</Text>
 
             <View style={styles.grid}>
                 {students.map((student, index) => (
@@ -51,7 +49,6 @@ const TalentSection: React.FC = () => {
         </View>
     );
 };
-
 
 const styles = StyleSheet.create({
         outerContainer: {
